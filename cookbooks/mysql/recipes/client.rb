@@ -32,6 +32,10 @@ package "mysql-devel" do
   action :install
 end
 
+package "make" do
+  action :install
+end
+
 if platform?(%w{ debian redhat centos fedora suse })
 
   package "mysql-ruby" do
