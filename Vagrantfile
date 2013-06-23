@@ -20,8 +20,6 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "theme/", "/var/www/wordpress/wp-content/themes/theme" 
 
 
-  # Forward a port from the guest to the host, which allows for outside
-  # computers to access the VM, whereas host only networking does not.
   config.vm.network :forwarded_port, guest: 80, host: 8080
   config.vm.network :forwarded_port, guest: 3306, host: 3306
 
